@@ -190,7 +190,8 @@ void Matrix::erase()
 		(*(this->pcount))--;
 	else
 	{
-		delete[] m_data;
+		for (int i = 0; i < row; i++)
+			delete[] m_data[i];
 		delete pcount;
 	}
 		
